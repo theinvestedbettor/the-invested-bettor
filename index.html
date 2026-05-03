@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063) -->
+<html lang="en" data-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Invested Bettor</title>
+  <meta name="description" content="A daily, unit-based picks newsletter for sports bettors ages 21-55 who want to bet with discipline, bankroll structure, and a long-term edge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./The Invested Bettor_files/css2" rel="stylesheet">
+  <style>
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2.2rem, 1.2rem + 3vw, 4.6rem);
+      --space-1: .25rem; --space-2: .5rem; --space-3: .75rem; --space-4: 1rem; --space-5: 1.25rem;
+      --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
+      --bg: #08131b;
+      --surface: rgba(9, 19, 29, 0.78);
+      --surface-2: rgba(14, 27, 38, 0.82);
+      --surface-3: rgba(18, 34, 47, 0.92);
+      --border: rgba(232, 220, 196, 0.14);
+      --divider: rgba(232, 220, 196, 0.1);
+      --text: #f2eadc;
+      --text-muted: #b9b09f;
+      --text-faint: #8b8479;
+      --text-dark: #0f171d;
+      --gold: #d5af5a;
+      --gold-soft: rgba(213, 175, 90, 0.16);
+      --teal: #3c98a2;
+      --teal-soft: rgba(60, 152, 162, 0.14);
+      --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.42);
+      --shadow-md: 0 18px 40px rgba(0, 0, 0, 0.24);
+      --radius-md: 0.85rem; --radius-lg: 1.2rem; --radius-xl: 1.6rem; --radius-full: 999px;
+      --max: 1220px;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Inter', Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 82% 8%, rgba(213,175,90,0.18), transparent 18%),
+        radial-gradient(circle at 84% 34%, rgba(70,138,150,0.12), transparent 22%),
+        linear-gradient(135deg, #071118 0%, #0b2030 52%, #08131b 100%);
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,0.04) 0.7px, transparent 0.7px);
+      background-size: 3px 3px;
+      opacity: 0.12;
+      mix-blend-mode: soft-light;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; background: none; border: 0; cursor: pointer; color: inherit; }
+    .container { width: min(calc(100% - 2rem), var(--max)); margin-inline: auto; }
+    .skip-link {
+      position: absolute; left: 1rem; top: -3rem; background: var(--gold); color: var(--text-dark);
+      padding: .75rem 1rem; border-radius: var(--radius-md); z-index: 100;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(6, 15, 22, 0.6);
+      border-bottom: 1px solid var(--divider);
+    }
+    .header-row {
+      display: flex; align-items: center; justify-content: space-between; gap: var(--space-4);
+      min-height: 4.8rem;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: .95rem; min-height: 44px;
+    }
+    .brand svg { width: 2.5rem; height: 2.5rem; color: var(--gold); }
+    .brand-text {
+      font-size: var(--text-sm); text-transform: uppercase; letter-spacing: .18em; font-weight: 700;
+    }
+    .nav-links { display: none; gap: var(--space-5); color: var(--text-muted); font-size: var(--text-sm); }
+    .nav-links a:hover { color: var(--text); }
+    .header-actions { display: flex; align-items: center; gap: .75rem; }
+
+    .btn {
+      min-height: 48px; display: inline-flex; align-items: center; justify-content: center;
+      padding: .92rem 1.3rem; border-radius: var(--radius-full); font-weight: 700; font-size: var(--text-sm);
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-gold {
+      background: linear-gradient(180deg, #e4c57a 0%, #c69a42 100%);
+      color: var(--text-dark);
+      box-shadow: 0 8px 22px rgba(198,154,66,0.22);
+    }
+    .btn-ghost {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .hero {
+      position: relative;
+      padding: clamp(4.5rem, 9vw, 8rem) 0 var(--space-16);
+    }
+    .hero-grid {
+      display: grid; gap: var(--space-10); align-items: center;
+    }
+    .hero-copy {
+      position: relative; z-index: 2;
+    }
+    .gold-rule {
+      width: 92px; height: 1px; background: linear-gradient(90deg, transparent 0%, var(--gold) 28%, var(--gold) 72%, transparent 100%);
+      margin-bottom: var(--space-4);
+      box-shadow: 0 0 18px rgba(213,175,90,0.45);
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem; margin-bottom: var(--space-4);
+      color: var(--gold); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .22em; font-weight: 700;
+    }
+    h1, h2, h3 { line-height: 1.02; }
+    .logotype {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 5.9rem);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #f4eddf;
+      text-wrap: balance;
+      max-width: 10ch;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.03), 0 10px 40px rgba(0,0,0,0.22);
+    }
+    .tagline {
+      margin-top: var(--space-4);
+      color: var(--gold);
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      font-size: var(--text-xs);
+      font-weight: 700;
+    }
+    .hero-copy p {
+      margin-top: var(--space-5);
+      color: var(--text-muted);
+      max-width: 58ch;
+      font-size: var(--text-base);
+    }
+    .hero-actions {
+      display: flex; flex-wrap: wrap; gap: .9rem; margin-top: var(--space-6);
+    }
+    .hero-notes {
+      display: flex; flex-wrap: wrap; gap: .9rem 1.25rem; margin-top: var(--space-6); color: var(--text-muted); font-size: var(--text-sm);
+    }
+    .hero-note::before {
+      content: "•"; color: var(--gold); margin-right: .45rem;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 420px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)),
+        rgba(9,19,29,0.42);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      isolation: isolate;
+    }
+    .hero-visual img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: saturate(1.05) contrast(1.04);
+    }
+    .hero-visual::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(7,17,24,0.35) 0%, rgba(7,17,24,0.08) 42%, rgba(7,17,24,0.02) 100%);
+      pointer-events: none;
+    }
+    .dashboard-float {
+      position: absolute; left: 1rem; right: 1rem; bottom: 1rem; z-index: 2;
+      display: grid; gap: .85rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .metric {
+      background: rgba(6, 15, 22, 0.7);
+      border: 1px solid rgba(232,220,196,0.12);
+      border-radius: var(--radius-lg);
+      padding: .9rem 1rem;
+      backdrop-filter: blur(12px);
+    }
+    .metric-label { color: var(--text-faint); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .16em; }
+    .metric strong { display: block; margin-top: .25rem; font-size: var(--text-lg); color: var(--text); }
+    .metric span { color: var(--gold); font-size: var(--text-sm); }
+
+    section { padding: var(--space-16) 0; }
+    .section-head { display: grid; gap: .75rem; margin-bottom: var(--space-8); }
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.3rem + 2.2vw, 3.4rem);
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      max-width: 12ch;
+      color: #f3ecde;
+    }
+    .section-head p { color: var(--text-muted); max-width: 62ch; }
+
+    .grid-3, .proof-grid {
+      display: grid; gap: var(--space-4);
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(17,33,45,0.78), rgba(10,22,31,0.84));
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      box-shadow: var(--shadow-md);
+    }
+    .card-number {
+      width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center;
+      border-radius: var(--radius-full); background: var(--gold-soft); color: var(--gold); font-size: var(--text-xs); font-weight: 700; margin-bottom: var(--space-4);
+    }
+    .card h3 {
+      font-size: 1.3rem; margin-bottom: .55rem; color: #f2eadc;
+    }
+    .card p { color: var(--text-muted); }
+
+    .proof-grid { align-items: stretch; }
+    .quote-card {
+      background: linear-gradient(180deg, rgba(18,35,48,0.82), rgba(8,18,27,0.86));
+    }
+    .quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 1.1rem + 1.3vw, 2.2rem);
+      line-height: 1.1;
+      color: #f4eddf;
+      max-width: 14ch;
+      margin-bottom: var(--space-4);
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    .stat-row {
+      display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-5);
+    }
+    .stat {
+      min-width: 150px; padding-top: var(--space-3); border-top: 1px solid var(--divider);
+    }
+    .stat strong {
+      display: block; font-size: var(--text-xl); color: var(--gold); font-weight: 800;
+    }
+    .stat span { color: var(--text-muted); font-size: var(--text-sm); }
+
+    .cta-wrap {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 88% 12%, rgba(213,175,90,0.16), transparent 20%),
+        linear-gradient(135deg, rgba(14,26,37,0.95) 0%, rgba(8,18,27,0.95) 100%);
+    }
+    .cta-wrap::before {
+      content: "";
+      position: absolute; inset: auto -10% 12% 48%; height: 180px;
+      background: radial-gradient(circle, rgba(213,175,90,0.14), transparent 62%);
+      pointer-events: none;
+    }
+    .cta-inner {
+      display: grid; gap: var(--space-6); align-items: center;
+    }
+    .cta-inner h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 1.4rem + 2vw, 3.2rem);
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      max-width: 13ch;
+    }
+    .cta-inner p { color: var(--text-muted); max-width: 56ch; }
+
+    footer {
+      padding: var(--space-8) 0 var(--space-10);
+      border-top: 1px solid var(--divider);
+      color: var(--text-muted);
+      font-size: var(--text-sm);
+    }
+    .footer-row { display: flex; flex-direction: column; gap: .6rem; }
+
+    @media (min-width: 820px) {
+      .nav-links { display: flex; }
+      .hero-grid { grid-template-columns: 1.02fr 0.98fr; }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .proof-grid { grid-template-columns: 0.9fr 1.1fr; }
+      .cta-inner { grid-template-columns: 1.1fr auto; }
+      .footer-row { flex-direction: row; justify-content: space-between; align-items: center; }
+    }
+    @media (max-width: 819px) {
+      .dashboard-float { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 520px; }
+      .header-actions .btn-gold { display: none; }
+    }
+
+    /* Chat widget */
+    .chat-launcher {
+      position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 50;
+      min-height: 56px; padding: .9rem 1.25rem; border-radius: var(--radius-full);
+      background: linear-gradient(180deg, #e4c57a 0%, #c69a42 100%);
+      color: var(--text-dark); font-weight: 700; font-size: var(--text-sm);
+      display: inline-flex; align-items: center; gap: .55rem;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.42), 0 0 0 1px rgba(213,175,90,0.4);
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+    .chat-launcher:hover { transform: translateY(-2px); }
+    .chat-launcher[hidden] { display: none; }
+    .chat-launcher svg { width: 1.1rem; height: 1.1rem; }
+
+    .chat-panel {
+      position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 51;
+      width: min(380px, calc(100vw - 2rem));
+      height: min(560px, calc(100dvh - 2rem));
+      display: flex; flex-direction: column;
+      background: linear-gradient(180deg, rgba(18,34,47,0.96), rgba(8,18,27,0.96));
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      backdrop-filter: blur(18px);
+    }
+    .chat-panel[hidden] { display: none; }
+    .chat-header {
+      display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+      padding: .9rem 1rem; border-bottom: 1px solid var(--divider);
+      background: rgba(6,15,22,0.5);
+    }
+    .chat-title { display: flex; align-items: center; gap: .6rem; }
+    .chat-title-mark {
+      width: 2rem; height: 2rem; border-radius: var(--radius-full);
+      background: var(--gold-soft); color: var(--gold);
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .chat-title-mark svg { width: 1rem; height: 1rem; }
+    .chat-title strong { font-size: var(--text-sm); letter-spacing: .04em; }
+    .chat-title span { display: block; color: var(--text-faint); font-size: var(--text-xs); }
+    .chat-close {
+      width: 2rem; height: 2rem; border-radius: var(--radius-full);
+      color: var(--text-muted);
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .chat-close:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+
+    .chat-log {
+      flex: 1; overflow-y: auto; padding: 1rem;
+      display: flex; flex-direction: column; gap: .65rem;
+      scroll-behavior: smooth;
+    }
+    .chat-msg {
+      max-width: 85%; padding: .7rem .9rem; border-radius: var(--radius-lg);
+      font-size: var(--text-sm); line-height: 1.5; white-space: pre-wrap;
+    }
+    .chat-msg.bot {
+      align-self: flex-start;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .chat-msg.user {
+      align-self: flex-end;
+      background: linear-gradient(180deg, rgba(213,175,90,0.92), rgba(198,154,66,0.92));
+      color: var(--text-dark); font-weight: 600;
+    }
+    .chat-msg.error { color: #f4b4a8; border-color: rgba(244,180,168,0.3); }
+    .chat-typing {
+      align-self: flex-start; display: inline-flex; gap: .25rem;
+      padding: .7rem .9rem; border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    }
+    .chat-typing span {
+      width: .35rem; height: .35rem; border-radius: 50%; background: var(--text-faint);
+      animation: chat-bounce 1.1s infinite ease-in-out;
+    }
+    .chat-typing span:nth-child(2) { animation-delay: .15s; }
+    .chat-typing span:nth-child(3) { animation-delay: .3s; }
+    @keyframes chat-bounce {
+      0%, 80%, 100% { transform: translateY(0); opacity: .5; }
+      40% { transform: translateY(-3px); opacity: 1; }
+    }
+
+    .chat-suggestions {
+      display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .25rem;
+    }
+    .chat-chip {
+      border: 1px solid rgba(213,175,90,0.45);
+      color: var(--gold);
+      padding: .45rem .7rem; border-radius: var(--radius-full);
+      font-size: var(--text-xs); font-weight: 600;
+      transition: background 160ms ease, color 160ms ease;
+    }
+    .chat-chip:hover { background: var(--gold-soft); }
+    .chat-chip:disabled { opacity: .5; cursor: default; }
+
+    .chat-form {
+      display: flex; gap: .5rem; padding: .75rem;
+      border-top: 1px solid var(--divider);
+      background: rgba(6,15,22,0.5);
+    }
+    .chat-input {
+      flex: 1; min-height: 44px; padding: .65rem .85rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border); border-radius: var(--radius-full);
+      color: var(--text); font: inherit; font-size: var(--text-sm);
+      outline: none;
+    }
+    .chat-input:focus { border-color: rgba(213,175,90,0.55); }
+    .chat-send {
+      min-height: 44px; padding: 0 1rem; border-radius: var(--radius-full);
+      background: linear-gradient(180deg, #e4c57a 0%, #c69a42 100%);
+      color: var(--text-dark); font-weight: 700; font-size: var(--text-sm);
+    }
+    .chat-send:disabled { opacity: .55; cursor: not-allowed; }
+
+/* ============================================================
+   ADDED 2026-05-03 -- Conversion sections (track record, sample,
+   pricing, FAQ, legal footer). Inherits existing CSS variables.
+   ============================================================ */
+
+.eyebrow {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .35rem;
+}
+.gold-text { color: var(--gold); }
+
+/* Track Record */
+.track-record {
+  border-top: 1px solid var(--divider);
+  border-bottom: 1px solid var(--divider);
+  background: linear-gradient(180deg, rgba(213,175,90,0.04) 0%, transparent 100%);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--divider);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: var(--space-6);
+}
+.stat-cell {
+  background: var(--surface-2);
+  padding: var(--space-8) var(--space-5);
+  text-align: center;
+  transition: background .25s ease;
+}
+.stat-cell:hover { background: var(--surface-3); }
+.stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 1.5rem + 1.6vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: .65rem;
+  letter-spacing: -0.5px;
+  font-feature-settings: 'tnum';
+}
+.stat-label {
+  font-size: var(--text-xs);
+  letter-spacing: .18em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+.stats-meta {
+  text-align: center;
+  margin-top: var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--text-faint);
+}
+@media (max-width: 720px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Sample Pick Card */
+.pick-card {
+  max-width: 760px;
+  margin: var(--space-6) auto 0;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.pick-card-header {
+  background: linear-gradient(135deg, var(--teal) 0%, #2a7a83 100%);
+  color: var(--text);
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+.pick-meta {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.pick-conf {
+  background: rgba(255,255,255,0.16);
+  padding: .35rem .8rem;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+.pick-card-body { padding: var(--space-6) var(--space-6); }
+.pick-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--divider);
+}
+.pick-cell-label {
+  font-size: var(--text-xs);
+  letter-spacing: .18em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: .35rem;
+}
+.pick-cell-value {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+.redacted {
+  filter: blur(6px);
+  user-select: none;
+  pointer-events: none;
+}
+.pick-row { margin-bottom: var(--space-4); }
+.pick-row strong {
+  color: var(--text);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.pick-row p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-top: .35rem;
+  line-height: 1.65;
+}
+.pick-card-footer {
+  background: var(--surface-3);
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--divider);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+.pick-card-footer a { color: var(--gold); font-weight: 700; }
+.pick-card-footer a:hover { text-decoration: underline; }
+@media (max-width: 600px) {
+  .pick-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Pricing */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+.price-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-6);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.price-card-featured {
+  border-color: var(--gold);
+  background: linear-gradient(180deg, var(--surface-3) 0%, var(--surface-2) 100%);
+  box-shadow: var(--shadow-md);
+}
+.price-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--text-dark);
+  padding: .3rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.price-tier {
+  font-size: var(--text-xs);
+  letter-spacing: .22em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: .65rem;
+  font-weight: 700;
+}
+.price-amount {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 2rem + 1.5vw, 3.6rem);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: .35rem;
+  letter-spacing: -0.5px;
+}
+.price-period {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-weight: 400;
+}
+.price-desc {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-5);
+  min-height: 3rem;
+}
+.price-features {
+  list-style: none;
+  margin-bottom: var(--space-6);
+  flex-grow: 1;
+}
+.price-features li {
+  padding: .8rem 0;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--divider);
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+}
+.price-features li:last-child { border-bottom: none; }
+.price-features li::before { content: "\2713"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+.price-cta { width: 100%; text-align: center; }
+@media (max-width: 880px) {
+  .price-grid { grid-template-columns: 1fr; }
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 780px;
+  margin: var(--space-6) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.faq-item {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+  transition: border-color .2s ease;
+}
+.faq-item[open] { border-color: var(--gold); }
+.faq-item summary {
+  font-weight: 700;
+  font-size: var(--text-base);
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  color: var(--text);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--gold);
+  font-weight: 400;
+  transition: transform .25s ease;
+  line-height: 1;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p {
+  margin-top: var(--space-4);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+/* Legal Footer */
+.legal-footer {
+  border-top: 1px solid var(--divider);
+  padding: var(--space-10) 0 var(--space-8);
+  background: var(--surface);
+}
+.legal-grid {
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  line-height: 1.65;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.legal-grid strong { color: var(--text-muted); font-weight: 700; }
+.legal-copy {
+  margin-top: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--divider);
+}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#top" aria-label="The Invested Bettor home">
+        <svg viewBox="0 0 48 48" fill="none" role="img" aria-label="The Invested Bettor logo">
+          <rect x="5" y="5" width="38" height="38" rx="11" stroke="currentColor" stroke-width="2.2"></rect>
+          <path d="M15 31L21.5 24.5L26 28.5L34 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M15 16H33" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+        </svg>
+        <span class="brand-text">The Invested Bettor</span>
+      </a>
+
+      <nav aria-label="Primary">
+        <div class="nav-links">
+          <a href="#track-record">Track Record</a>
+          <a href="#sample">Sample</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="#edge">See the framework</a>
+        <a class="btn btn-gold" href="https://theinvestedbettor.substack.com/subscribe" target="_blank" rel="noopener noreferrer">Subscribe now</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="gold-rule"></div>
+          <span class="eyebrow">Daily picks • unit based • ages 21–55</span>
+          <h1 class="logotype">THE INVESTED BETTOR</h1>
+          <div class="tagline">DAILY PICKS. PROVEN ROI.</div>
+          <p>
+            A daily, unit-based picks newsletter for sports bettors ages 21 to 55 who want to stop random gambling and start operating with a disciplined bankroll plan, cleaner sizing, and a process built for the long run.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://theinvestedbettor.substack.com/subscribe" target="_blank" rel="noopener noreferrer">Subscribe now</a>
+            <a class="btn btn-ghost" href="#audience">See who it’s for</a>
+          </div>
+          <div class="hero-notes" aria-label="Audience and positioning notes">
+            <span class="hero-note">Recreational to moderately serious bettors</span>
+            <span class="hero-note">Investing mindset over gambling impulse</span>
+            <span class="hero-note">Premium, disciplined daily delivery</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Premium sports betting dashboard hero image">
+          <img src="./The Invested Bettor_files/d38d6a4a-caee-4fc5-8f83-0f2a6a3d31d4.png" alt="Dark luxury sports betting cover art with financial dashboard motifs and editorial typography" width="1600" height="900" loading="lazy">
+          <div class="dashboard-float">
+            <div class="metric">
+              <div class="metric-label">Positioning</div>
+              <strong>Calculated edge</strong>
+              <span>Not casino energy</span>
+            </div>
+            <div class="metric">
+              <div class="metric-label">Delivery</div>
+              <strong>1 daily email</strong>
+              <span>Clean picks + units</span>
+            </div>
+            <div class="metric">
+              <div class="metric-label">Mindset</div>
+              <strong>Bankroll first</strong>
+              <span>Built to survive variance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRACK RECORD (added 2026-05-03) ===== -->
+    <section id="track-record" class="track-record">
+      <div class="container">
+        <div class="section-head" style="text-align:center;">
+          <span class="eyebrow">Live Track Record</span>
+          <h2>No promises. Just receipts.</h2>
+          <p style="margin: 0 auto;">Every pick graded against final scores. Every loss recorded. The numbers below update as the master tracker grows.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-cell">
+            <div class="stat-value gold-text">+14.8%</div>
+            <div class="stat-label">All-Time ROI</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-value gold-text">+$146.80</div>
+            <div class="stat-label">Cumulative P&amp;L</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-value">60.0%</div>
+            <div class="stat-label">Win Rate</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-value">50</div>
+            <div class="stat-label">Picks Graded</div>
+          </div>
+        </div>
+        <p class="stats-meta">Tracking since March 24, 2026 &middot; Hypothetical $1,000 bankroll &middot; 1 unit = $10</p>
+      </div>
+    </section>
+
+    <section id="audience">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Audience</span>
+          <h2>For sports bettors who want structure, not chaos.</h2>
+          <p>
+            This positioning is designed for sports bettors ages 21 to 55 who enjoy NBA, NHL, MLB, and NFL action but want their betting routine to feel measured, premium, and repeatable rather than emotional.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>Daily card with units</h3>
+            <p>Every pick is paired with stake sizing so the reader knows how much conviction is behind each position, not just what side to click.</p>
+          </article>
+          <article class="card" id="edge">
+            <div class="card-number">02</div>
+            <h3>Bankroll discipline</h3>
+            <p>The message is clear: no chasing, no all-in framing, and no pretending one night should dictate the next week of betting behavior.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>Premium tone</h3>
+            <p>The look and copy are styled to feel closer to financial analysis than sportsbook hype, which supports trust and long-term subscription intent.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container proof-grid">
+        <article class="card quote-card">
+          <span class="eyebrow">Positioning statement</span>
+          <p class="quote">This is investing language for bettors who are done acting like every wager is a thrill ride.</p>
+          <p>This direction fits broader newsletter and betting-page examples where clarity, trust, and clear structure outperform noisy pages with too many offers competing at once.</p>
+        </article>
+
+        <article class="card">
+          <span class="eyebrow">What stands out</span>
+          <h3>What subscribers are buying</h3>
+          <p>They are not just buying picks. They are buying a calmer routine: daily edges, consistent unit sizing, and a framework that reduces bad bankroll habits.</p>
+          <div class="stat-row">
+            <div class="stat"><strong>1 email</strong><span>Simple daily delivery</span></div>
+            <div class="stat"><strong>Units</strong><span>Clear risk communication</span></div>
+            <div class="stat"><strong>No tilt</strong><span>Sharper long-term behavior</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== SAMPLE PICK (added 2026-05-03) ===== -->
+    <section id="sample">
+      <div class="container">
+        <div class="section-head" style="text-align:center;">
+          <span class="eyebrow">What You'll Receive</span>
+          <h2>A pick, redacted.</h2>
+          <p style="margin: 0 auto;">This is the format every subscriber gets at noon ET. Sharp signals, edge math, and full reasoning &mdash; for every play.</p>
+        </div>
+        <article class="pick-card">
+          <header class="pick-card-header">
+            <span class="pick-meta">NHL &middot; Game 7 &middot; 6:00 PM ET</span>
+            <span class="pick-conf">High Confidence &middot; 2u</span>
+          </header>
+          <div class="pick-card-body">
+            <div class="pick-grid">
+              <div>
+                <div class="pick-cell-label">The Pick</div>
+                <div class="pick-cell-value redacted">Under 5.5 (-110)</div>
+              </div>
+              <div>
+                <div class="pick-cell-label">Edge</div>
+                <div class="pick-cell-value gold-text">+5.1%</div>
+              </div>
+              <div>
+                <div class="pick-cell-label">Best Book</div>
+                <div class="pick-cell-value redacted">DraftKings</div>
+              </div>
+            </div>
+            <div class="pick-row">
+              <strong>Sharp Action</strong>
+              <p>Tickets 53% Over &middot; Money 39% Over &middot; 14-pt gap = textbook sharp Under signal. Action Network listed this as their top NHL play of the day.</p>
+            </div>
+            <div class="pick-row">
+              <strong>Reasoning</strong>
+              <p>Both elite goalies confirmed. Vasilevskiy 1.81 GAA, .932 SV% in series. Dobes .918 SV%. Four of six series games went Under. Game 7s historically average 12% fewer goals than regular season. Line moved 6.0 to 5.5 as sharp money came in.</p>
+            </div>
+          </div>
+          <footer class="pick-card-footer">
+            Want the full pick + 4 more like this every day? <a href="https://theinvestedbettor.substack.com/subscribe">Subscribe free &rarr;</a>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PRICING (added 2026-05-03) ===== -->
+    <section id="pricing">
+      <div class="container">
+        <div class="section-head" style="text-align:center;">
+          <span class="eyebrow">Pricing</span>
+          <h2>Start free. Upgrade when the numbers prove themselves.</h2>
+          <p style="margin: 0 auto;">No credit card to start. Cancel anytime.</p>
+        </div>
+        <div class="price-grid">
+          <div class="price-card">
+            <div class="price-tier">Free</div>
+            <div class="price-amount">$0<span class="price-period">/forever</span></div>
+            <p class="price-desc">For curious bettors who want to see how we operate before committing.</p>
+            <ul class="price-features">
+              <li>1 daily preview pick</li>
+              <li>Weekly recap PDF</li>
+              <li>Public ROI tracker</li>
+              <li>Email delivery</li>
+            </ul>
+            <a href="https://theinvestedbettor.substack.com/subscribe" class="btn btn-ghost price-cta">Get Started Free</a>
+          </div>
+          <div class="price-card price-card-featured">
+            <div class="price-badge">Most Popular</div>
+            <div class="price-tier">Picks</div>
+            <div class="price-amount">$19<span class="price-period">/month</span></div>
+            <p class="price-desc">The full daily card. Every pick, every signal, every reason.</p>
+            <ul class="price-features">
+              <li>Full daily PDF (5 plays max)</li>
+              <li>Sharp money + line movement</li>
+              <li>Confidence vs. Edge chart</li>
+              <li>"Why I'm Passing" section</li>
+              <li>Optional Safe Parlay</li>
+              <li>Cancel anytime</li>
+            </ul>
+            <a href="https://theinvestedbettor.substack.com/subscribe" class="btn btn-gold price-cta">Subscribe</a>
+          </div>
+          <div class="price-card">
+            <div class="price-tier">VIP</div>
+            <div class="price-amount">$49<span class="price-period">/month</span></div>
+            <p class="price-desc">For bettors who want the edge before everyone else.</p>
+            <ul class="price-features">
+              <li>Everything in Picks</li>
+              <li>Private Discord access</li>
+              <li>Picks 2 hours before email</li>
+              <li>Monthly performance PDF</li>
+              <li>Direct Q&amp;A access</li>
+              <li>Cancel anytime</li>
+            </ul>
+            <a href="https://theinvestedbettor.substack.com/subscribe" class="btn btn-ghost price-cta">Go VIP</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ (added 2026-05-03) ===== -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head" style="text-align:center;">
+          <span class="eyebrow">FAQ</span>
+          <h2>The honest answers.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Is this gambling advice? Are you guaranteeing wins?</summary>
+            <p>No. Every pick is a hypothetical, model-based edge &mdash; never a guarantee. Past performance does not indicate future results. Sports betting carries real financial risk. We publish receipts for every play (wins and losses) so you can evaluate the process, not chase outcomes. This is not financial advice.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How are picks graded? Can I trust the ROI numbers?</summary>
+            <p>Every pick is recorded before games begin and graded against publicly reported final scores using the line we captured at the time of the recommendation. The master tracker is updated daily by an automated process &mdash; no cherry-picking, no hindsight. Losing days are recorded the same as winning ones. Nothing is hidden.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What sports do you cover?</summary>
+            <p>NBA, NHL, MLB, NFL, NCAA Basketball, NCAA Football, and Formula 1 (race days only). Daily picks are filtered to the highest-edge spots &mdash; typically 2 to 5 plays per day, never more.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why "unit-based" instead of dollar amounts?</summary>
+            <p>Units scale with your bankroll. We use a hypothetical $1,000 bankroll where 1 unit = $10, but the same percentages apply whether your bankroll is $500, $5,000, or $50,000. Sizing rules: High confidence = 2u max, Medium = 1u, Low = 0.5u. We recommend most readers cap daily exposure at 5% of bankroll for sustainable bankroll management.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if I just want to try it before paying?</summary>
+            <p>Free tier is forever-free. You will get one preview pick per day, the weekly recap PDF, and full access to the public tracker. No credit card required. If the numbers prove themselves, upgrade. If not, stay free.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is gambling responsible? What if I have a problem?</summary>
+            <p>Never bet more than you can afford to lose. Sports betting can be addictive. If you or someone you know has a gambling problem, call <strong>1-800-GAMBLER</strong> or visit ncpgambling.org. We will never encourage chasing losses or any behavior that prioritizes recovery over discipline.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="subscribe">
+      <div class="container">
+        <div class="card cta-wrap">
+          <div class="cta-inner">
+            <div>
+              <span class="eyebrow">Join</span>
+              <h2>Build a betting routine that survives the cold streaks.</h2>
+              <p>The button below now goes directly to your Substack subscribe page, so this version is ready to publish as a simple live landing page.</p>
+            </div>
+            <div>
+              <a class="btn btn-gold" href="https://theinvestedbettor.substack.com/subscribe" target="_blank" rel="noopener noreferrer">Subscribe now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="chat-launcher" id="chatLauncher" type="button" aria-label="Open chat" aria-expanded="false" aria-controls="chatPanel">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Chat with us
+  </button>
+
+  <aside class="chat-panel" id="chatPanel" role="dialog" aria-label="The Invested Bettor chat" hidden>
+    <header class="chat-header">
+      <div class="chat-title">
+        <span class="chat-title-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div>
+          <strong>The Invested Bettor</strong>
+          <span>Daily picks, unit-based</span>
+        </div>
+      </div>
+      <button class="chat-close" id="chatClose" type="button" aria-label="Close chat">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="16" height="16">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </header>
+    <div class="chat-log" id="chatLog" role="log" aria-live="polite"></div>
+    <form class="chat-form" id="chatForm" autocomplete="off">
+      <input class="chat-input" id="chatInput" type="text" placeholder="Ask about picks, units, or fit…" aria-label="Type your message" maxlength="500" required>
+      <button class="chat-send" id="chatSend" type="submit">Send</button>
+    </form>
+  </aside>
+
+  <script>
+    (function () {
+      const launcher = document.getElementById('chatLauncher');
+      const panel = document.getElementById('chatPanel');
+      const closeBtn = document.getElementById('chatClose');
+      const log = document.getElementById('chatLog');
+      const form = document.getElementById('chatForm');
+      const input = document.getElementById('chatInput');
+      const sendBtn = document.getElementById('chatSend');
+
+      const SUGGESTIONS = [
+        { label: "Who it's for", prompt: "Who is this newsletter for?" },
+        { label: 'How units work', prompt: 'How does the unit-based approach work?' },
+        { label: 'Why people subscribe', prompt: 'Why do people subscribe?' },
+      ];
+
+      const history = [];
+      let greeted = false;
+      let pending = false;
+
+      function scrollLog() {
+        log.scrollTop = log.scrollHeight;
+      }
+
+      function appendMessage(role, text) {
+        const el = document.createElement('div');
+        el.className = 'chat-msg ' + role;
+        el.textContent = text;
+        log.appendChild(el);
+        scrollLog();
+        return el;
+      }
+
+      function appendError(text) {
+        const el = appendMessage('bot', text);
+        el.classList.add('error');
+      }
+
+      function appendSuggestions() {
+        const wrap = document.createElement('div');
+        wrap.className = 'chat-suggestions';
+        SUGGESTIONS.forEach(({ label, prompt }) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'chat-chip';
+          btn.textContent = label;
+          btn.addEventListener('click', () => {
+            wrap.querySelectorAll('button').forEach((b) => (b.disabled = true));
+            sendMessage(prompt);
+          });
+          wrap.appendChild(btn);
+        });
+        log.appendChild(wrap);
+        scrollLog();
+      }
+
+      function showTyping() {
+        const el = document.createElement('div');
+        el.className = 'chat-typing';
+        el.innerHTML = '<span></span><span></span><span></span>';
+        el.id = 'chatTyping';
+        log.appendChild(el);
+        scrollLog();
+        return el;
+      }
+
+      function greet() {
+        if (greeted) return;
+        greeted = true;
+        const welcome =
+          "Welcome to The Invested Bettor. The newsletter is a daily, unit-based picks service — happy to walk you through how it works, whether it’s a fit, or why the unit approach matters.";
+        const followUp =
+          "What would you like to know first: who it’s for, how units work, or why people subscribe?";
+        appendMessage('bot', welcome);
+        appendMessage('bot', followUp);
+        history.push({ role: 'assistant', content: welcome + '\n\n' + followUp });
+        appendSuggestions();
+      }
+
+      function openPanel() {
+        panel.hidden = false;
+        launcher.hidden = true;
+        launcher.setAttribute('aria-expanded', 'true');
+        greet();
+        setTimeout(() => input.focus(), 50);
+      }
+
+      function closePanel() {
+        panel.hidden = true;
+        launcher.hidden = false;
+        launcher.setAttribute('aria-expanded', 'false');
+        launcher.focus();
+      }
+
+      async function sendMessage(text) {
+        const trimmed = text.trim();
+        if (!trimmed || pending) return;
+        pending = true;
+        sendBtn.disabled = true;
+        input.disabled = true;
+
+        appendMessage('user', trimmed);
+        history.push({ role: 'user', content: trimmed });
+        const typing = showTyping();
+
+        try {
+          const res = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ messages: history }),
+          });
+          typing.remove();
+          if (!res.ok) {
+            const data = await res.json().catch(() => ({}));
+            appendError(data.error || 'The assistant is unavailable right now. Please try again in a moment.');
+          } else {
+            const data = await res.json();
+            const reply = (data.reply || '').trim();
+            if (reply) {
+              appendMessage('bot', reply);
+              history.push({ role: 'assistant', content: reply });
+            } else {
+              appendError('No reply received. Please try again.');
+            }
+          }
+        } catch (err) {
+          typing.remove();
+          appendError('Network error. Please check your connection and try again.');
+        } finally {
+          pending = false;
+          sendBtn.disabled = false;
+          input.disabled = false;
+          input.focus();
+        }
+      }
+
+      launcher.addEventListener('click', openPanel);
+      closeBtn.addEventListener('click', closePanel);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !panel.hidden) closePanel();
+      });
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const text = input.value;
+        input.value = '';
+        sendMessage(text);
+      });
+    })();
+  </script>
+
+  <footer class="legal-footer">
+    <div class="container">
+      <div class="legal-grid">
+        <p><strong>Disclaimer:</strong> The Invested Bettor publishes hypothetical, model-based betting analysis for entertainment and educational purposes only. Picks are not guaranteed outcomes. Past performance does not indicate future results. Nothing on this site constitutes financial advice, investment advice, or a promise of profit.</p>
+        <p><strong>Responsible Gambling:</strong> You must be 21 or older to place wagers in most U.S. jurisdictions. Sports betting involves real financial risk and can be addictive. Never bet more than you can afford to lose. If you or someone you know has a gambling problem, call <a href="tel:1-800-426-2537" style="color:var(--gold);">1-800-GAMBLER</a> or visit <a href="https://www.ncpgambling.org" target="_blank" rel="noopener" style="color:var(--gold);">ncpgambling.org</a> for confidential help.</p>
+        <p class="legal-copy">&copy; 2026 The Invested Bettor. All rights reserved. &middot; Premium daily picks for disciplined sports bettors.</p>
+      </div>
+    </div>
+  </footer>
+
+
+</body></html>
